@@ -1,0 +1,175 @@
+*{
+    font-family: system-ui;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+}
+
+header{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: aquamarine;
+    height: 45px;
+    padding-left: 10px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.744);
+    text-wrap: nowrap;
+    gap: 1rem;
+
+    
+}
+#a{
+    color: black;
+}
+
+#b{
+    color: black;
+}
+
+nav{
+
+    gap: 25px;
+    display: flex;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+button#signup{
+    margin-right: 20px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    text-wrap: nowrap;
+
+
+}
+
+#signup:hover{
+    cursor: grab;
+    background-color: rgba(0, 0, 0, 0.47);
+    opacity: 0.5sec;
+}
+
+#container{
+    text-wrap: nowrap;
+}
+
+section{
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.344);
+    
+ } 
+
+
+#home{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+
+#home-background{
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+}
+
+#home-bg{
+    height: 100vh;
+    padding-top: 30px;
+    object-fit: cover;
+}
+
+#home-heading{
+    color: white;
+}
+
+#home-para{
+    margin-bottom: 50px;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+#enroll{
+    background-color:rgb(75, 189, 189);
+    color: black;
+    margin-right: 15px;
+    margin-bottom: 6rem;
+
+}
+
+#learn-more{
+    color: black;
+    background-color:rgb(75, 189, 189);
+
+
+}
+#last{
+    height: 50vh;
+    background-color:black;
+    color: white;
+    
+
+}
+#footer{
+    display: flex;
+    gap: 15px;
+    color: white;
+    margin-left: 5px;
+}
+
+#copy{
+    margin-right: 170px;
+
+}
+a{
+    color: white;
+}
+.fa-instagram {
+    color: #E4405F;
+
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-youtube {
+    color: #cc1212;
+}
+.fa-envelope{
+color: rgb(94, 222, 94);}
+
+
+.social-icon:hover {
+    color: #000; 
+    transform: scale(1.2); 
+}
+.fa-facebook{
+    color: rgb(75, 75, 199);
+}
+.fa-phone{
+    color: aqua;
+    
+}
+
