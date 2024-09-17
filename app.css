@@ -1,153 +1,148 @@
-*{
+/* Global Styles */
+* {
     font-family: system-ui;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-
-body{
-    margin: 0;
-    padding: 0;
+body {
     margin-top: 0;
 }
 
-header{
-
+/* Header Styling */
+header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-color: aquamarine;
     height: 45px;
-    padding-left: 10px;
-    padding-top: 5px;
+    padding: 5px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.744);
-    text-wrap: nowrap;
-    gap: 1rem;
-
-    
-}
-#a{
-    color: black;
+    z-index: 1000;
 }
 
-#b{
-    color: black;
-}
-
-nav{
-
-    gap: 25px;
+nav {
     display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: black;
     text-decoration: none;
     text-wrap: nowrap;
 }
 
-button#signup{
+button#signup {
     margin-right: 20px;
-    padding: 5px;
+    padding: 5px 10px;
     background-color: black;
     color: white;
-    text-wrap: nowrap;
-
-
+    border: none;
+    cursor: pointer;
 }
 
-#signup:hover{
-    cursor: grab;
+button#signup:hover {
     background-color: rgba(0, 0, 0, 0.47);
-    opacity: 0.5sec;
+    opacity: 0.8;
 }
 
-#container{
-    text-wrap: nowrap;
-}
-
-section{
-
+/* Section Styling */
+section {
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.344);
-    
- } 
-
-
-#home{
-    justify-content: center;
     text-align: center;
-    align-items: center;
+    padding: 20px;
+}
+
+#home {
     flex-direction: column;
- }
+}
 
-
-#home-background{
+#home-background {
     position: absolute;
     z-index: -1;
     height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
-#home-bg{
-    height: 100vh;
-    padding-top: 30px;
+#home-bg {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
-#home-heading{
+#home-heading {
     color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-#home-para{
-    margin-bottom: 50px;
+#home-para {
     color: white;
-    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
-#enroll{
-    background-color:rgb(75, 189, 189);
+#home-button {
+    margin-bottom: 100px;
+}
+
+#enroll, #learn-more {
+    background-color: rgb(75, 189, 189);
     color: black;
-    margin-right: 15px;
-    margin-bottom: 6rem;
-
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
-#learn-more{
-    color: black;
-    background-color:rgb(75, 189, 189);
-
-
+#enroll:hover, #learn-more:hover {
+    background-color: rgb(60, 150, 150);
 }
-#last{
-    height: 50vh;
-    background-color:black;
+
+#last {
+    background-color: black;
     color: white;
-    
-
+    padding: 50px 0;
+    text-align: center;
 }
-#footer{
+
+/* Footer Styling */
+#footer {
     display: flex;
-    gap: 15px;
-    color: white;
-    margin-left: 5px;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
 }
 
-#copy{
-    margin-right: 170px;
-
-}
-a{
+#footer a {
     color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+
+#footer a:hover {
+    transform: scale(1.1);
+}
+
+#footer i {
+    margin-right: 10px;
+}
+
 .fa-instagram {
     color: #E4405F;
-
 }
 
 .fa-twitter {
@@ -157,19 +152,69 @@ a{
 .fa-youtube {
     color: #cc1212;
 }
-.fa-envelope{
-color: rgb(94, 222, 94);}
 
-
-.social-icon:hover {
-    color: #000; 
-    transform: scale(1.2); 
+.fa-envelope {
+    color: rgb(94, 222, 94);
 }
-.fa-facebook{
+
+.fa-facebook {
     color: rgb(75, 75, 199);
 }
-.fa-phone{
+
+.fa-phone {
     color: aqua;
-    
 }
 
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #home-heading {
+        font-size: 1.5rem;
+    }
+
+    #home-para {
+        font-size: 1rem;
+    }
+
+    #enroll, #learn-more {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        gap: 15px;
+    }
+
+    #home-heading {
+        font-size: 1.2rem;
+    }
+
+    #home-para {
+        font-size: 0.9rem;
+    }
+
+    #enroll, #learn-more {
+        padding: 5px 10px;
+    }
+}
